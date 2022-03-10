@@ -1,20 +1,23 @@
-import "./styles.scss"
+import "./styles.scss";
 
 import React, { Fragment } from "react";
-import  ReactDOM  from "react-dom";
+import ReactDOM from "react-dom";
 import Test from "../components/Test";
 
 const App = () => {
   return (
-      <Fragment>
-    <h1 className="test">Hello from React!</h1>
-    <Test/>
+    <Fragment>
+      <h1 className="test">Hello from Readct!</h1>
+      <Test />
     </Fragment>
-  )
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("app"));
+
+if (module.hot) {
+  module.hot.accept();
 }
-
-ReactDOM.render(<App/>, document.getElementById("app"));
-
 // // const validator = require("validator"); // traditional way to file using node, in Ecmascript use import
 // import tripleMe from "./tripleMe";
 // // import validator from "validator"; instead of importing alla the package, import only the needed to reduce the size of the file
@@ -26,10 +29,12 @@ ReactDOM.render(<App/>, document.getElementById("app"));
 // console.log(tripleMe(50));
 // console.log(isEmail("ali.ossaily@outlook.com"));
 
-// /*
-// if(module.hot){
-//     module.hot.accept();
-// } 
-// */
-
 // // by default npx webpack will look at the index.js in src folder and bundle file in dist eith name main.js
+
+// open setting by press Ctrl + ,
+// go to setting json. by press on top rigth
+/* add or uncomment this line 
+"files.associations":{
+  "*.js" : "javascriptreact"
+}
+*/
