@@ -16,7 +16,7 @@ const config = {
   entry: "./src/app.js",
   // control where the bundeled files gets output
   //( bundle files in bundle.js file  inside dist folder)
-  // [hash] used to generate cash busting string, to prevent cashing issue
+  // [hash] used to generate cache busting string ( new name of file on every change), to prevent caching issue
   output: {
     filename: "bundle.[hash].js",
     path: path.resolve(__dirname, "dist"),
@@ -75,7 +75,7 @@ const config = {
 };
 
 // MiniCssExtractPlugin plugin will pulls out the css into it's own separate css file, instaed of bundeling it in the javascript file
-// [hash] used to generate cash busting string ( new name of file on every change), to prevent cashing issue
+// [hash] used to generate cache busting string ( new name of file on every change), to prevent caching issue
 // CleanWebpackPlugin will remove old version of files and create new one
 /* 
   will genereate manifest.json file in dist folder, it ha key pair value with exact new file names were generated, 
